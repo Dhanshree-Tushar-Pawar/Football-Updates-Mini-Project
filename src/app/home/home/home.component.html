@@ -1,0 +1,13 @@
+<h1>{{ title }}</h1>
+<nav class="navbar">
+    <ul class="nav-style">
+        <li *ngFor="let country of countries"><button type="button" name="england" id="{{country.name}}Select">
+                <h3>
+                    <a routerLink="/standings/{{country.name}}"
+                        [ngClass]="{'active-link' : activeCountryName == country.name || country.name == countryName}"
+                        (click)="shareCountryName(country.name)">{{ country.name }}</a>
+                </h3>
+            </button>
+        <li>
+    </ul>
+</nav>
